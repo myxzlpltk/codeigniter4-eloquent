@@ -112,24 +112,27 @@ class Database extends \CodeIgniter\Database\Config
 				}
 			}
 		}
+	}
+
+	//--------------------------------------------------------------------
+
+	public static function bootEloquent(){
+		$database = new self();
 
 		$capsule = new Capsule;
 		$capsule->addConnection([
 			'driver'    => 'mysql',
-			'host'      => $this->default['hostname'],
-			'database'  => $this->default['database'],
-			'username'  => $this->default['username'],
-			'password'  => $this->default['password'],
-			'charset'   => $this->default['charset'],
-			'collation' => $this->default['DBCollat'],
-			'prefix'    => $this->default['DBPrefix'],
+			'host'      => $database->default['hostname'],
+			'database'  => $database->default['database'],
+			'username'  => $database->default['username'],
+			'password'  => $database->default['password'],
+			'charset'   => $database->default['charset'],
+			'collation' => $database->default['DBCollat'],
+			'prefix'    => $database->default['DBPrefix'],
 		]);
 		$capsule->bootEloquent();
 		
 		Relation::morphMap([
 		]);
 	}
-
-	//--------------------------------------------------------------------
-
 }
