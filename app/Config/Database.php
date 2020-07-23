@@ -1,5 +1,10 @@
 <?php namespace Config;
 
+use Illuminate\Container\Container;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Illuminate\Database\Eloquent\Relations\Relation;
+use Illuminate\Events\Dispatcher;
+
 /**
  * Database Configuration
  *
@@ -107,6 +112,22 @@ class Database extends \CodeIgniter\Database\Config
 				}
 			}
 		}
+
+		$capsule = new Capsule;
+		$capsule->addConnection([
+			'driver'    => 'mysql',
+			'host'      => $this->default['hostname'],
+			'database'  => $this->default['database'],
+			'username'  => $this->default['username'],
+			'password'  => $this->default['password'],
+			'charset'   => $this->default['charset'],
+			'collation' => $this->default['DBCollat'],
+			'prefix'    => $this->default['DBPrefix'],
+		]);
+		$capsule->bootEloquent();
+		
+		Relation::morphMap([
+		]);
 	}
 
 	//--------------------------------------------------------------------

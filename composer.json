@@ -7,7 +7,9 @@
 	"require": {
 		"php": ">=7.2",
 		"codeigniter4/framework": "^4",
-		"codeigniter4/translations": "^4.0"
+		"codeigniter4/translations": "^4.0",
+		"illuminate/database": "^7.21",
+		"illuminate/events": "^7.21"
 	},
 	"require-dev": {
 		"fzaninotto/faker": "^1.9@dev",
