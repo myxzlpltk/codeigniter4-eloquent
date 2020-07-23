@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5f355e6ab206f315c11bdd82f69c8bf8",
+    "content-hash": "ccb9019f01be8cd1dd223ff4ea2eab25",
     "packages": [
         {
             "name": "codeigniter4/framework",
@@ -378,6 +378,61 @@
             "time": "2020-06-18T15:37:01+00:00"
         },
         {
+            "name": "illuminate/filesystem",
+            "version": "v7.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/filesystem.git",
+                "reference": "73082c13a2e544c80f55b669a781e01d0627eaab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/filesystem/zipball/73082c13a2e544c80f55b669a781e01d0627eaab",
+                "reference": "73082c13a2e544c80f55b669a781e01d0627eaab",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5",
+                "symfony/finder": "^5.0"
+            },
+            "suggest": {
+                "ext-ftp": "Required to use the Flysystem FTP driver.",
+                "illuminate/http": "Required for handling uploaded files (^7.0).",
+                "league/flysystem": "Required to use the Flysystem local and FTP drivers (^1.0.34).",
+                "league/flysystem-aws-s3-v3": "Required to use the Flysystem S3 driver (^1.0).",
+                "league/flysystem-cached-adapter": "Required to use the Flysystem cache (^1.0).",
+                "league/flysystem-sftp": "Required to use the Flysystem SFTP driver (^1.0).",
+                "psr/http-message": "Required to allow Storage::put to accept a StreamInterface (^1.0).",
+                "symfony/mime": "Required to enable support for guessing extensions (^5.0)."
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate Filesystem package.",
+            "homepage": "https://laravel.com",
+            "time": "2020-07-21T13:53:52+00:00"
+        },
+        {
             "name": "illuminate/support",
             "version": "v7.21.0",
             "source": {
@@ -438,6 +493,112 @@
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
             "time": "2020-07-17T14:27:04+00:00"
+        },
+        {
+            "name": "illuminate/view",
+            "version": "v7.21.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/view.git",
+                "reference": "ac9f95e4261383ab691c3054a54133ec9a491fa6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/view/zipball/ac9f95e4261383ab691c3054a54133ec9a491fa6",
+                "reference": "ac9f95e4261383ab691c3054a54133ec9a491fa6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "illuminate/container": "^7.0",
+                "illuminate/contracts": "^7.0",
+                "illuminate/events": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "7.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Illuminate\\View\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "The Illuminate View package.",
+            "homepage": "https://laravel.com",
+            "time": "2020-07-20T03:25:06+00:00"
+        },
+        {
+            "name": "jenssegers/blade",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jenssegers/blade.git",
+                "reference": "d221b717b4302ad71476ebd05abf0c2b98cbd7d8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jenssegers/blade/zipball/d221b717b4302ad71476ebd05abf0c2b98cbd7d8",
+                "reference": "d221b717b4302ad71476ebd05abf0c2b98cbd7d8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/view": "^5.5|^6.0|^7.0",
+                "php": ">=7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.0|^7.0",
+                "satooshi/php-coveralls": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Jenssegers\\Blade\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Segers",
+                    "homepage": "https://jenssegers.com"
+                }
+            ],
+            "description": "The standalone version of Laravel's Blade templating engine for use outside of Laravel.",
+            "keywords": [
+                "blade",
+                "laravel",
+                "render",
+                "template",
+                "view"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/jenssegers",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/jenssegers-blade",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2020-03-17T15:00:55+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -941,6 +1102,69 @@
                 }
             ],
             "time": "2020-06-15T12:59:21+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v5.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "4298870062bfc667cb78d2b379be4bf5dec5f187"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/4298870062bfc667cb78d2b379be4bf5dec5f187",
+                "reference": "4298870062bfc667cb78d2b379be4bf5dec5f187",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-20T17:43:50+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
